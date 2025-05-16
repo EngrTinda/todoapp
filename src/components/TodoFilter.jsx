@@ -1,11 +1,14 @@
 import React from 'react'
 
-const TodoFilter = () => {
+const TodoFilter = ({filter_todo}) => {
   return (
-    <select name='' id=''>
-        <option value="Active">Active</option>
-        <option value="Completed">Completed</option>
-    </select>
+    <form action="">
+      <select name='' id='' onChange={((e) => filter_todo(e.target.value))}>
+          <option value="">All</option>
+          <option value="Active">Active</option>
+          <option value="Completed">Completed</option>
+      </select>
+    </form>
     
   )
 }
